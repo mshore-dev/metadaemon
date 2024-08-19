@@ -14,12 +14,12 @@ type Config struct {
 }
 
 type ParsedMetadata struct {
-	URL         string
-	ReleaseDate time.Time
-	Artists     []string
-	Name        string
-	Album       string
-	Thumbnail   string
+	URL string `json:"url"`
+	// ReleaseDate time.Time
+	Artists   []string `json:"artists"`
+	Name      string   `json:"name"`
+	Album     string   `json:"album"`
+	Thumbnail string   `json:"thumbnail"`
 }
 
 type spotifyAccessToken struct {

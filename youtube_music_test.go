@@ -2,9 +2,9 @@ package metadaemon
 
 import "testing"
 
-func TestYouTubeGetMetadata(t *testing.T) {
+func TestYouTubeMusicGetMetadata(t *testing.T) {
 
-	meta, err := md.GetYouTubeMetadata("uQTBzmBDSv0")
+	meta, err := md.GetYouTubeMusicMetadata("uQTBzmBDSv0")
 	if err != nil {
 		t.Fatalf("failed to get track metadata: %v\n", err)
 	}

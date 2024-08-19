@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type youtubeTrackMetadata struct {
+type youtubeMusicTrackMetadata struct {
 	Track     string   `json:"track"`
 	Thumbnail string   `json:"thumbnail"`
 	Album     string   `json:"album"`
@@ -15,7 +15,7 @@ type youtubeTrackMetadata struct {
 	URL       string   `json:"original_url"`
 }
 
-func (m *MetaDaemon) GetYouTubeMetadata(id string) (*ParsedMetadata, error) {
+func (m *MetaDaemon) GetYouTubeMusicMetadata(id string) (*ParsedMetadata, error) {
 
 	// https://music.youtube.com/watch?v=:id
 
@@ -30,7 +30,7 @@ func (m *MetaDaemon) GetYouTubeMetadata(id string) (*ParsedMetadata, error) {
 		return &ParsedMetadata{}, err
 	}
 
-	var meta youtubeTrackMetadata
+	var meta youtubeMusicTrackMetadata
 
 	err = json.Unmarshal(out, &meta)
 	if err != nil {
